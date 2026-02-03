@@ -7,7 +7,7 @@ This Python command line application accepts a compact time range expression as 
 
 The input can contain:
 - Individual values 
-- Ranges using `-`
+- Ranges using "-"
 - Comma-separated combinations of values and ranges (`9-12,14,16-18`)
 
 The application prints out all expanded values in ascending order, separated by spaces.
