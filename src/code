@@ -1,0 +1,37 @@
+
+import sys
+
+#Taking input
+input = sys.argv[1]          
+if len(sys.argv) < 2:
+    print("Give input in range: ")
+  
+# split the input into parts
+parts = input.split(",")
+
+numbers = []
+
+for ch in parts:
+    if "-" in ch:
+	# spliting data into parts where "-"
+        start, end = ch.split("-")
+		# try and catch if any error occur
+		try:
+            start = int(start)
+            end = int(end)
+		except ValueError:
+		    print("Invalid Number")
+		continue
+        for i in range(start, end + 1):
+            numbers.append(i)
+    else:
+        i = int(ch)
+        numbers.append(i)
+
+# To sort the numbers
+numbers.sort()
+
+# join the output
+result = " ".join(map(str, numbers))
+
+print(result)
